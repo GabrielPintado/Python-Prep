@@ -211,7 +211,7 @@ varia -= 1
 
 # In[23]:
 
-""" Porque son de distinto tipo (entero y string respectivamente) por eso no pueden sumarse, en caso de que ambos fueran enteros el resultado daria 4, en cambio si ambos fueran string el resultado seria "22"."""
+"""Porque son de distinto tipo (entero y string respectivamente) por eso no pueden sumarse, en caso de que ambos fueran enteros el resultado daria 4, en cambio si ambos fueran string el resultado seria "22".  """
 
 
 
