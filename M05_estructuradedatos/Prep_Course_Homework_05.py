@@ -7,20 +7,22 @@
 
 # In[3]:
 
-
+l = ["Cusco", "Buenos Aires", "Santo Domingo", "Ciudad de México", "Nueva York", "Madrid", "París", "Génova"] 
+print(l)
 
 
 # 2) Imprimir por pantalla el segundo elemento de la lista
 
 # In[4]:
 
-
+print(l[1])
 
 
 # 3) Imprimir por pantalla del segundo al cuarto elemento
 
 # In[8]:
 
+print(l[1:5])
 
 
 
@@ -29,7 +31,7 @@
 
 # In[12]:
 
-
+print(type(l))
 
 
 
@@ -37,7 +39,7 @@
 
 # In[14]:
 
-
+print(l[2:])
 
 
 
@@ -45,7 +47,7 @@
 
 # In[15]:
 
-
+print(l[:4])
 
     
 
@@ -54,8 +56,10 @@
 
 # In[16]:
 
+l.append("París")
+l.append("Roma")
 
-
+"""No arroja error, solo se repite en caso de que ya esté"""
 
 
 
@@ -66,7 +70,7 @@
 
 # In[20]:
 
-
+l.insert(3, "Berlín")
 
 
 
@@ -79,22 +83,23 @@
 
 # In[22]:
 
-
+a = [1, 2, 3, 4]
+l.extend(a)
 
 
 # 10) Encontrar el índice de la ciudad que en el punto 7 agregamos duplicada. ¿Se nota alguna particularidad?
 
 # In[23]:
 
-
-
+print(l.index("París"))
+"""Solo va a encontrar el primero de los 2"""
 
 
 # 11) ¿Qué pasa si se busca un elemento que no existe?
 
 # In[24]:
 
-
+"""ValueError: 'Parí' is not in list"""
 
 
 
@@ -102,7 +107,7 @@
 
 # In[25]:
 
-
+l.remove("Madrid")
 
 
 
@@ -111,14 +116,16 @@
 # In[27]:
 
 
-
+"""ValueError: list.remove(x): x not in list"""
 
 
 # 14) Extraer el úlimo elemento de la lista, guardarlo en una variable e imprimirlo
 
 # In[28]:
 
-
+p = l.pop()
+print(l)
+print(p)
 
 
 
@@ -126,28 +133,29 @@
 
 # In[29]:
 
-
+print(l * 4)
 
 
 # 16) Crear una tupla que contenga los números enteros del 1 al 20
 
 # In[32]:
 
-
+t = (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20)
 
 
 # 17) Imprimir desde el índice 10 al 15 de la tupla
 
 # In[35]:
 
-
+print(t[10:15])
 
 
 # 18) Evaluar si los números 20 y 30 están dentro de la tupla
 
 # In[41]:
 
-
+print(20 in t)
+print(30 in t)
 
 
 
@@ -155,7 +163,10 @@
 
 # In[48]:
 
-
+print("París" in l)
+if not "París" in l:
+    l.append("París")
+    print(l)
 
 
 
@@ -163,7 +174,13 @@
 
 # In[51]:
 
-
+c = 0
+inp = str(input())
+for i in l:
+    if i == inp:
+        c += 1
+        
+print(c)
 
 
 
@@ -171,7 +188,7 @@
 
 # In[52]:
 
-
+tl = list(t)
 
 
 
@@ -179,7 +196,11 @@
 
 # In[55]:
 
-
+tu = (1,2,3)
+a,b,c = tu
+print(a)
+print(b)
+print(c)
 
 
 
@@ -187,7 +208,13 @@
 
 # In[57]:
 
+d={}
 
+d["ciudades"] = l
+d["Paises"] = ["Perú", "Argentina", "México"]
+d["Continentes"] = ["América", "Europa", "Asia"]
+
+print(d)
 
 
 
@@ -196,13 +223,13 @@
 
 # In[59]:
 
-
+print(d.keys())
 
 
 # 25) Imprimir las ciudades a través de su clave
 
 # In[61]:
 
-
+print(d["ciudades"])
 
 
