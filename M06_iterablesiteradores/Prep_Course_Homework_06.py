@@ -7,6 +7,11 @@
 
 # In[1]:
 
+l = []
+n = -1
+while n > -16:
+  l.append(n)
+  n -= 1
 
 
 
@@ -15,6 +20,12 @@
 
 # In[3]:
 
+l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+n = 0
+while n < len(l):
+    if l[n] % 2 == 0:
+        print(l[n])
+    n += 1
 
 
 
@@ -23,7 +34,9 @@
 
 # In[4]:
 
-
+for i in l:
+  if i % 2 == 0:
+    print(i)
 
 
 
@@ -31,19 +44,27 @@
 
 # In[7]:
 
-
+for i in l:
+  if l.index(i) < 3:
+    print(i)
 
 
 # 5) Utilizar la función **enumerate** para obtener dentro del iterable, tambien el índice al que corresponde el elemento
 
 # In[9]:
 
-
+for i, o in enumerate(l):
+  print(i, o)
 
 
 # 6) Dada la siguiente lista de números enteros entre 1 y 20, crear un ciclo donde se completen los valores faltantes: lista = [1,2,5,7,8,10,13,14,15,17,20]
 
 # In[10]:
+lista = [1,2,5,7,8,10,13,14,15,17,20]
+for i in range(1,20):
+  if i not in lista:
+    lista.insert(i-1, i)
+print(lista)
 
 
 
@@ -64,6 +85,13 @@ n = 1
 
 # In[23]:
 
+f = [0, 1]
+n = 0
+while n < 28:
+    i = f[n] + f[n + 1]
+    f.append(i)
+    n += 1
+print(f)
 
 
 
@@ -72,7 +100,8 @@ n = 1
 
 # In[24]:
 
-
+a = sum(f)
+print(a)
 
 
 # 9) La proporción aurea se expresa con una proporción matemática que nace el número irracional Phi= 1,618… que los griegos llamaron número áureo. El cuál se puede aproximar con la sucesión de Fibonacci. Con la lista del ejercicio anterior, imprimir el cociente de los últimos 5 pares de dos números contiguos:<br>
@@ -86,7 +115,9 @@ n = 1
 
 # In[38]:
 
-
+for i in range(len(f) - 5, len(f) - 1):
+    c = f[i + 1] / f[i]
+    print(c)
 
 
 # 10) A partir de la variable cadena ya dada, mostrar en qué posiciones aparece la letra "n"<br>
@@ -94,7 +125,10 @@ n = 1
 
 # In[39]:
 
-
+cadena = 'Hola Mundo. Esto es una practica del lenguaje de programación Python'
+for i, l in enumerate(cadena):
+  if l == "n":
+    print(i)
 
 
 
@@ -102,7 +136,12 @@ n = 1
 
 # In[40]:
 
-
+d = {
+  "a" : 1,
+  "b" : 2
+}
+for i in d:
+  print(i)
 
 
 
@@ -110,8 +149,9 @@ n = 1
 
 # In[41]:
 
-
-
+it = iter(list(cadena))
+for i in range(len(cadena)):
+  print(next(it))
 
 
 # In[45]:
@@ -124,7 +164,10 @@ n = 1
 
 # In[48]:
 
+aa = [1, 2, 3, 4]
+bb = ["a", "b", "c", "d"]
 
+ab = zip(aa, bb)
 
 
 
@@ -133,7 +176,13 @@ n = 1
 
 # In[49]:
 
-
+lis = [18,21,29,32,35,42,56,60,63,71,84,90,91,100]
+n_lis = []
+for i in lis:
+  if i % 7 == 0:
+    n_lis.append(i)
+print(n_lis)
+    
 
 
 
@@ -142,7 +191,14 @@ n = 1
 
 # In[56]:
 
-
+lis = [[1,2,3,4],'rojo','verde',[True,False,False],['uno','dos','tres']]
+count = 0
+for i in lis:
+    if type(i) == list:
+        count += len(i)
+    else:    
+        count += 1
+print(count)
 
 
 # In[51]:
@@ -161,5 +217,10 @@ n = 1
 
 # In[58]:
 
-
+lis = [[1,2,3,4],'rojo','verde',[True,False,False],['uno','dos','tres']]
+count = 0
+for i, e in enumerate(lis):
+    if type(e) != list:
+        lis[i] = [e]
+print(lis)
 
