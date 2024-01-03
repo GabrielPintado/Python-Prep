@@ -7,7 +7,15 @@
 
 # In[1]:
 
-
+def prim(nu):
+  es = True
+  for i in range(2,nu):
+    if nu % i == 0:
+      es = False
+      break
+  return es
+      
+print(prim(int(input())))
 
 
 
@@ -15,6 +23,16 @@
 
 # In[25]:
 
+b = [1, 4, 7, 34, 53 ,7 ,2 ,52]
+
+def pr(lista):
+  n_li = []
+  for i in lista:
+    if prim(i):
+      n_li.append(i)
+  return n_li
+      
+print(pr(b))
 
 
 
