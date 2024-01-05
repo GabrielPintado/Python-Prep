@@ -40,7 +40,21 @@ print(pr(b))
 
 # In[33]:
 
+a = [12, 451, 526, 36, 47, 25, 234, 521, 1, 3, 7, 465, 347, 4, 27, 35, 3, 1, 412, 41, 4, 5, 32, 1, 42, 41, 3, 5, 12, 4, 2, 4, 14, 2, 2, 4, 2, 4, 1, 1, 3, 34, 24, 1, 3, 3, 3, 3, 3, 3, 3, 14]
 
+def mas(n):
+  lis = {}
+  for i in n:
+    if str(i) in lis:
+      lis[str(i)] += 1
+    else:
+      lis[str(i)] = 1
+  m = max(lis, key=lis.get)
+  n = lis[m]
+  return m, n
+
+
+print(mas(a))
 
 
 
