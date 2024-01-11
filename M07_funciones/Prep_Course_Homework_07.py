@@ -103,7 +103,48 @@ print(con(int(input()), input(), input()))
 
 # In[62]:
 
+def con(val, ori, des):
+    
+    if ori == "Celsius":
+        if des == "Farenheit":
+            val =  1.8 * val + 32
+        elif des == "Kelvin":
+            val = val + 273.15
+        elif des == ori:
+            return val
+        else:
+            print("no valido")
+        
+    elif ori == "Farenheit":
+        if des == "Celsius":
+            val = (val - 32) / 1.8
+        elif des == "Kelvin":
+            val = ((val - 32) / 1.8) + 273.15
+        elif des == ori:
+            return val
+        else:
+            print("no valido")
+            
+    elif ori == "Kelvin":
+        if des == "Farenheit":
+            val = ((val - 273.15) * 1.8 + 32) 
+        elif des == "Celsius":
+            val = val - 273.15
+        elif des == ori:
+            return val
+        else:
+            print("no valido")
+        
+    else:
+        print("no valido")
+    
+    return(val)
 
+g = ["Celsius", "Farenheit", "Kelvin"]
+
+for i in g:
+    for e in g:
+        print("1 grado", i, "a", e, "es:", con(1, i, e))
 
 
 # 6) Armar una función que devuelva el factorial de un número. Tener en cuenta que el usuario puede equivocarse y enviar de parámetro un número no entero o negativo
