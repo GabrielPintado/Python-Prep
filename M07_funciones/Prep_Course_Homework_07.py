@@ -65,7 +65,38 @@ print(mas(a))
 # 
 
 # In[56]:
-
+def con(val, ori, des):
+    
+    if ori == "Celsius":
+        if des == "Farenheit":
+            val =  1.8 * val + 32
+        elif des == "Kelvin":
+            val = val + 273.15
+        else:
+            print("no valido")
+        
+    elif ori == "Farenheit":
+        if des == "Celsius":
+            val = (val - 32) / 1.8
+        elif des == "Kelvin":
+            val = ((val - 32) / 1.8) + 273.15
+        else:
+            print("no valido")
+            
+    elif ori == "Kelvin":
+        if des == "Farenheit":
+            val = ((val - 273.15) * 1.8 + 32) 
+        elif des == "Celsius":
+            val = val - 273.15
+        else:
+            print("no valido")
+        
+    else:
+        print("no valido")
+    
+    return(val)
+    
+print(con(int(input()), input(), input()))
 
 
 # 5) Iterando una lista con los tres valores posibles de temperatura que recibe la función del punto 5, hacer un print para cada combinación de los mismos:
