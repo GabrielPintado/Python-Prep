@@ -151,6 +151,16 @@ for i in g:
 
 # In[65]:
 
+def fac(val):
+    if val > 0:
+        nu = 1
+        for i in range(1, int(val + 1)):
+          nu *= i
+        return nu
+    else:
+        return "valor no valido"
+
+print(fac(int(input())))
 
 
 
