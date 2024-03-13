@@ -10,7 +10,11 @@
 
 # In[1]:
 
-
+class vehiculo:
+  __init__(self, color, tipo, cilindrada):
+  self.color = color
+  self.tipo = tipo
+  self.cilindrada = cilindrada
 
 
 # 2) A la clase Vehiculo creada en el punto 1, agregar los siguientes métodos:<br>
@@ -20,7 +24,12 @@
 
 # In[5]:
 
-
+class vehiculo:
+  __init__(self, color, tipo, cilindrada):
+  self.color = color
+  self.tipo = tipo
+  self.cilindrada = cilindrada
+  
 
 
 
