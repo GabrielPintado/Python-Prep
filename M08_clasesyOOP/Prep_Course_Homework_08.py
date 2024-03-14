@@ -29,7 +29,17 @@ class vehiculo:
   self.color = color
   self.tipo = tipo
   self.cilindrada = cilindrada
+  self.velocidad = 0
+  self.direccion = 0
+
   
+  def Acelerar(self, n):
+    self.velocidad += n
+  def Frenar(self, n):
+    self.velocidad -= n
+  def Doblar(self, n):
+    self.direccion += n
+    
 
 
 
@@ -37,7 +47,7 @@ class vehiculo:
 
 # In[6]:
 
-
+c1 = vehiculo("rojo",
 
 
 
