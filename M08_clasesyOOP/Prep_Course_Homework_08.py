@@ -33,11 +33,11 @@ class vehiculo:
   self.direccion = 0
 
   
-  def Acelerar(self, n):
+  def acelerar(self, n):
     self.velocidad += n
-  def Frenar(self, n):
+  def frenar(self, n):
     self.velocidad -= n
-  def Doblar(self, n):
+  def doblar(self, n):
     self.direccion += n
     
 
@@ -47,7 +47,18 @@ class vehiculo:
 
 # In[6]:
 
-c1 = vehiculo("rojo",
+c1 = vehiculo("rojo", "BMW", 2)
+c2 = vehiculo("azul", "VolksWagen", 1)
+c3 = vehiculo("verde", "Nissan", 3)
+
+c1.acelerar
+c1.frenar
+c1.doblar
+c2.acelerar
+c2.frenar
+c3.acelerar
+c3.frenar
+c3.doblar
 
 
 
@@ -55,7 +66,25 @@ c1 = vehiculo("rojo",
 
 # In[12]:
 
+class vehiculo:
+  __init__(self, color, tipo, cilindrada):
+  self.color = color
+  self.tipo = tipo
+  self.cilindrada = cilindrada
+  self.velocidad = 0
+  self.direccion = 0
 
+  
+  def acelerar(self, n):
+    self.velocidad += n
+  def frenar(self, n):
+    self.velocidad -= n
+  def doblar(self, n):
+    self.direccion += n
+  def mostrar1(self):
+    print(self.color, self.tipo, self.cilindrada
+  def mostrar2(self):
+    print(self.velocidad, self.direccion)
 
 
 
