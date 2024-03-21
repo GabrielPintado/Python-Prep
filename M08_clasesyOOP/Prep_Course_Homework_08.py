@@ -82,7 +82,7 @@ class vehiculo:
   def doblar(self, n):
     self.direccion += n
   def mostrar1(self):
-    print(self.color, self.tipo, self.cilindrada
+    print(f "soy un automovil {self.color} de tipo {self.tipo} y {self.cilindrada} de cilindrada)
   def mostrar2(self):
     print(self.velocidad, self.direccion)
 
