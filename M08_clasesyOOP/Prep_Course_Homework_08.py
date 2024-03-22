@@ -82,9 +82,9 @@ class vehiculo:
   def doblar(self, n):
     self.direccion += n
   def mostrar1(self):
-    print(f "soy un automovil {self.color} de tipo {self.tipo} y {self.cilindrada} de cilindrada)
+    print(f "soy un automovil {self.color} de tipo {self.tipo} y con {self.cilindrada} de cilindrada)
   def mostrar2(self):
-    print(self.velocidad, self.direccion)
+    print(f"el automovil tiene una velocidad de {self.velocidad} y una dirección de {self.direccion}")
 
 
 
@@ -104,7 +104,58 @@ class vehiculo:
 
 # In[33]:
 
+class verificador:
 
+  
+  def primo(nu):
+  es = True
+  for i in range(2,nu):
+    if nu % i == 0:
+      es = False
+      break
+  return es
+
+  def moda(n):
+  lis = {}
+  for i in n:
+    if str(i) in lis:
+      lis[str(i)] += 1
+    else:
+      lis[str(i)] = 1
+  m = max(lis, key=lis.get)
+  n = lis[m]
+  return m, n
+
+  def grado(val, ori, des):
+    
+    if ori == "Celsius":
+        if des == "Farenheit":
+            val =  1.8 * val + 32
+        elif des == "Kelvin":
+            val = val + 273.15
+        else:
+            print("no valido")
+        
+    elif ori == "Farenheit":
+        if des == "Celsius":
+            val = (val - 32) / 1.8
+        elif des == "Kelvin":
+            val = ((val - 32) / 1.8) + 273.15
+        else:
+            print("no valido")
+            
+    elif ori == "Kelvin":
+        if des == "Farenheit":
+            val = ((val - 273.15) * 1.8 + 32) 
+        elif des == "Celsius":
+            val = val - 273.15
+        else:
+            print("no valido")
+        
+    else:
+        print("no valido")
+    
+    return(val)
 
 
 
