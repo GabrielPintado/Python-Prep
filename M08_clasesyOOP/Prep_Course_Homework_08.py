@@ -171,6 +171,12 @@ def factorial(n):
 
 # In[28]:
 
+a = verificador()
+
+b = [1, 2, 3, 4, 5, 6, 7]
+
+a.primo(3)
+
 
 
 
