@@ -177,6 +177,12 @@ b = [1, 2, 3, 4, 5, 6, 7]
 
 a.primo(3)
 
+a.moda(b)
+
+a.grado(9, Celsius, Kelvin)
+
+a.factorial(5)
+
 
 
 
@@ -185,7 +191,66 @@ a.primo(3)
 
 # In[55]:
 
+class verificador:
 
+
+  def __init__(self, lista
+  
+  def primo(nu):
+  es = True
+  for i in range(2,nu):
+    if nu % i == 0:
+      es = False
+      break
+  return es
+
+  def moda(n):
+  lis = {}
+  for i in n:
+    if str(i) in lis:
+      lis[str(i)] += 1
+    else:
+      lis[str(i)] = 1
+  m = max(lis, key=lis.get)
+  n = lis[m]
+  return m, n
+
+  def grado(val, ori, des):
+    
+    if ori == "Celsius":
+        if des == "Farenheit":
+            val =  1.8 * val + 32
+        elif des == "Kelvin":
+            val = val + 273.15
+        else:
+            print("no valido")
+        
+    elif ori == "Farenheit":
+        if des == "Celsius":
+            val = (val - 32) / 1.8
+        elif des == "Kelvin":
+            val = ((val - 32) / 1.8) + 273.15
+        else:
+            print("no valido")
+            
+    elif ori == "Kelvin":
+        if des == "Farenheit":
+            val = ((val - 273.15) * 1.8 + 32) 
+        elif des == "Celsius":
+            val = val - 273.15
+        else:
+            print("no valido")
+        
+    else:
+        print("no valido")
+    
+    return(val)
+
+def factorial(n):
+   if n == 1:
+       return n
+   else:
+       return n*factorial(n-1)
 
 
 # 8) Crear un archivo .py aparte y ubicar allí la clase generada en el punto anterior. Luego realizar la importación del módulo y probar alguna de sus funciones
