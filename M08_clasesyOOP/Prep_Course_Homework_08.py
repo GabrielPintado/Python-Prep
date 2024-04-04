@@ -106,6 +106,8 @@ class vehiculo:
 
 class verificador:
 
+  def __init__(self):
+    pass
   
   def primo(nu):
   es = True
