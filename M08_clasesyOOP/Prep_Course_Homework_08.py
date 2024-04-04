@@ -194,7 +194,8 @@ a.factorial(5)
 class verificador:
 
 
-  def __init__(self, lista
+  def __init__(self, lista):
+    self.lista = lista
   
   def primo(nu):
   es = True
