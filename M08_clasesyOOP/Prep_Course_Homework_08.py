@@ -199,7 +199,7 @@ class verificador:
   def __init__(self, lista):
     self.lista = lista
   
-  def primo(nu):
+  def _primo(self, nu):
   es = True
   for i in range(2,nu):
     if nu % i == 0:
@@ -207,10 +207,9 @@ class verificador:
       break
   return es
 
-  def moda(n):
-  lis = {}
-  for i in n:
-    if str(i) in lis:
+  def _moda(self):
+  for i in self.lista:
+    if str(i) in self.lista:
       lis[str(i)] += 1
     else:
       lis[str(i)] = 1
